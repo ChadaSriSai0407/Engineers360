@@ -140,23 +140,16 @@ If automatic initialization is not configured, initialize the tables using the p
 
 Engineer360 uses SQLite to store application data in a local database file named `engineer360.db`.
 
-### Database Setup
+### 🗄️ Database Setup
 
 1. Install Python and create the project's virtual environment.
 2. Install the backend dependencies using `backend/requirements.txt`.
-3. Start the FastAPI backend.
-4. The database must be initialized according to the database setup implemented in the backend.
+3. SQLite is generally included with Python, so no separate database server is required.
+4. Start the FastAPI backend. The database and tables should be initialized according to the project's database configuration.
+5. To inspect the database visually, install a compatible SQLite extension in VS Code and open `backend/engineer360.db`.
 
-### Viewing the Database in VS Code
-
-To inspect the database visually:
-
-1. Open Visual Studio Code.
-2. Install a compatible SQLite database viewer or SQLite extension.
-3. Open or connect to `backend/engineer360.db`.
-4. Browse the available tables and inspect their records.
-
-**Note:** The VS Code extensions are optional tools for developers. They are not required to run Engineer360.
+**Note:**
+The SQLite extension is optional and is only needed for viewing the database in VS Code. The database file is excluded from GitHub, so each developer uses their own local database. If the database or tables aren't created automatically, check the initialization logic in `backend/main.py` and `backend/models.py`.
 
 The database file is excluded from GitHub, so each developer uses their own local database.
 
